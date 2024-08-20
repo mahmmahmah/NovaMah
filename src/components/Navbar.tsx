@@ -14,9 +14,10 @@ const Navbar: FC = () => {
             className="object-cover"
           />
         </div>
-        <span className="text-2xl font-bold none md:block">Football info</span>
+        <span className="text-2xl font-bold none md:block">
+          Nova Matches | نوفا ماتش
+        </span>
       </Link>
-      <p className="text-xs md:text-sm">create by theoyoth</p>
     </div>
   );
 };
