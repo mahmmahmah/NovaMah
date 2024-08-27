@@ -11,33 +11,51 @@ export const metadata: Metadata = {
 };
 
 async function fetchLeagues() {
-  const getLaLiga = await filterLeague("Primera Division");
-  const getEnglishLeague = await filterLeague("Premier League");
-  const getBundesliga = await filterLeague("Bundesliga");
-  const getChampionship = await filterLeague("Championship");
-  const getCopaLibertadores = await filterLeague("Copa Libertadores");
-  const getLigue1 = await filterLeague("Ligue 1");
-  const getPrimeiraLiga = await filterLeague("Primeira Liga");
-  const getSerieA = await filterLeague("Serie A");
-  const getBrasileiro = await filterLeague("Campeonato Brasileiro Série A");
-  const getUEFAChampionsLeague = await filterLeague("UEFA Champions League");
-  const getEuropeanChampionship = await filterLeague("European Championship");
-  const getEredivisie = await filterLeague("Eredivisie");
+  try {
+    const getLaLiga = await filterLeague("Primera Division");
+    const getEnglishLeague = await filterLeague("Premier League");
+    const getBundesliga = await filterLeague("Bundesliga");
+    const getChampionship = await filterLeague("Championship");
+    const getCopaLibertadores = await filterLeague("Copa Libertadores");
+    const getLigue1 = await filterLeague("Ligue 1");
+    const getPrimeiraLiga = await filterLeague("Primeira Liga");
+    const getSerieA = await filterLeague("Serie A");
+    const getBrasileiro = await filterLeague("Campeonato Brasileiro Série A");
+    const getUEFAChampionsLeague = await filterLeague("UEFA Champions League");
+    const getEuropeanChampionship = await filterLeague("European Championship");
+    const getEredivisie = await filterLeague("Eredivisie");
 
-  return {
-    getLaLiga,
-    getEnglishLeague,
-    getBundesliga,
-    getChampionship,
-    getCopaLibertadores,
-    getLigue1,
-    getPrimeiraLiga,
-    getSerieA,
-    getBrasileiro,
-    getUEFAChampionsLeague,
-    getEuropeanChampionship,
-    getEredivisie,
-  };
+    return {
+      getLaLiga,
+      getEnglishLeague,
+      getBundesliga,
+      getChampionship,
+      getCopaLibertadores,
+      getLigue1,
+      getPrimeiraLiga,
+      getSerieA,
+      getBrasileiro,
+      getUEFAChampionsLeague,
+      getEuropeanChampionship,
+      getEredivisie,
+    };
+  } catch (error) {
+    console.error("Error fetching leagues:", error);
+    return {
+      getLaLiga: [],
+      getEnglishLeague: [],
+      getBundesliga: [],
+      getChampionship: [],
+      getCopaLibertadores: [],
+      getLigue1: [],
+      getPrimeiraLiga: [],
+      getSerieA: [],
+      getBrasileiro: [],
+      getUEFAChampionsLeague: [],
+      getEuropeanChampionship: [],
+      getEredivisie: [],
+    };
+  }
 }
 
 const LeagueSection = ({ title, data }: { title: string; data: any[] }) => (
@@ -53,11 +71,7 @@ const LeagueSection = ({ title, data }: { title: string; data: any[] }) => (
   </section>
 );
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function Dwris() {
   const {
     getLaLiga,
     getEnglishLeague,
@@ -79,7 +93,7 @@ export default async function RootLayout({
         <hr />
         <img
           src="/img/leagues/CL.png"
-          alt="Laliga"
+          alt="UEFA Champions League"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection
@@ -89,14 +103,14 @@ export default async function RootLayout({
         <hr />
         <img
           src="/img/leagues/ED.png"
-          alt="Laliga"
+          alt="Eredivisie"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الهولندي" data={getEredivisie} />
         <hr />
         <img
           src="/img/leagues/ec.png"
-          alt="Laliga"
+          alt="European Championship"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection
@@ -106,49 +120,49 @@ export default async function RootLayout({
         <hr />
         <img
           src="/img/leagues/Design-sans-titre-19.webp.webp"
-          alt="Laliga"
+          alt="La Liga"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الاسباني" data={getLaLiga} />
         <hr />
         <img
           src="/img/leagues/premier_league.webp"
-          alt="Laliga"
+          alt="Premier League"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الممتاز" data={getEnglishLeague} />
         <hr />
         <img
           src="/img/leagues/bundesliga.webp"
-          alt="Laliga"
+          alt="Bundesliga"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الألماني" data={getBundesliga} />
         <hr />
         <img
           src="/img/leagues/championship.webp"
-          alt="Laliga"
+          alt="Championship"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="بطولة" data={getChampionship} />
         <hr />
         <img
           src="/img/leagues/copa_libertadores.webp"
-          alt="Laliga"
+          alt="Copa Libertadores"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="كوبا ليبرتادوريس" data={getCopaLibertadores} />
         <hr />
         <img
           src="/img/leagues/ligue_1.webp"
-          alt="Laliga"
+          alt="Ligue 1"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الفرنسي " data={getLigue1} />
         <hr />
         <img
           src="/img/leagues/liga_portugal.webp"
-          alt="Laliga"
+          alt="Primeira Liga"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection
@@ -158,14 +172,14 @@ export default async function RootLayout({
         <hr />
         <img
           src="/img/leagues/serie_a.webp"
-          alt="Laliga"
+          alt="Serie A"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري الإيطالي" data={getSerieA} />
         <hr />
         <img
           src="/img/leagues/brazilian_serie_a.webp"
-          alt="Laliga"
+          alt="Campeonato Brasileiro"
           className="w-6 h-6 mx-auto"
         />
         <LeagueSection title="الدوري البرازيلي" data={getBrasileiro} />
