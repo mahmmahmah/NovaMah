@@ -8,8 +8,8 @@ const News = async () => {
   const newsData: newsType[] = getNews.articles;
 
   return (
-    <div className="flex bg-[rgb(40,46,58)] rounded-md px-2 md:px-6 py-2">
-      <div className="flex overflow-x-auto space-x-4">
+    <div className=" bg-[rgb(40,46,58)] rounded-md px-2 md:px-6 py-2">
+      <div className=" overflow-x-auto space-x-4">
         {newsData.map((news) => (
           <Link key={news.title} href={news.url} legacyBehavior>
             <a target="_blank" className="flex-shrink-0">

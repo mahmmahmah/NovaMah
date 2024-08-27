@@ -20,7 +20,7 @@ export async function fetchTeamDetails(teamId: string): Promise<TeamDetails> {
     `https://api.football-data.org/v4/teams/${teamId}`,
     {
       headers: {
-        Authorization: `Bearer YOUR_API_KEY`, // استبدل YOUR_API_KEY بمفتاح API الخاص بك
+        "X-Auth-Token": process.env.API_TOKEN || "",
       },
     }
   );
@@ -48,6 +48,30 @@ export const getMatchesfootball = async () => {
     throw error;
   }
 };
+
+// src/api/index.ts
+export async function getMatchDetails(matchId: string) {
+  const options = {
+    method: "GET",
+    headers: {
+      "X-Auth-Token": process.env.API_TOKEN || "",
+    },
+  };
+
+  try {
+    const response = await fetch(
+      `https://api.football-data.org/v4/matches/${matchId}`,
+      options
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  } catch (error) {
+    console.error("Failed to fetch match details:", error);
+    return null;
+  }
+}
 
 export const getMatchesfootballFinished = async () => {
   const todayDate = new Date();

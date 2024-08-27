@@ -3,12 +3,12 @@ const nextConfig = {
   images: {
     domains: [
       "gizmodo.com",
-      "crests.football-data.org",
-      "www.cnet.com",
-      "npr.brightspotcdn.com",
       "media.npr.org",
       "readwrite.com",
-      // أضف هنا أي نطاق آخر تحتاجه
+      "crests.football-data.org",
+      "npr.brightspotcdn.com",
+      "api.time.com",
+      "www.cnet.com", // أضف هذا السطر
     ],
   },
 };

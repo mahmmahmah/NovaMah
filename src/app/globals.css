@@ -155,3 +155,21 @@ main {
     display: block; /* إظهار على الشاشات التي تكون 1024 بكسل أو أكبر */
   }
 }
+
+img {
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+img:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
