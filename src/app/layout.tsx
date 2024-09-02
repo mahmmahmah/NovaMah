@@ -28,6 +28,13 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2365434402623559"
+          crossorigin="anonymous"
+        ></script>
+      </head>
       <body className={inter.className}>
         <main className="px-2 py-2 md:px-16 md:py-4 text-textPrimary">
           <Navbar />

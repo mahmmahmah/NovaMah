@@ -20,7 +20,7 @@ const Status = ({
           onClick={() => setStatusMatch("TODAY")}
           className={`flex-1 px-2 py-1 text-primary text-xs md:text-sm rounded-md ${
             statusMatch === "TODAY"
-              ? "bg-teal-400 font-semibold"
+              ? "bg-[#443344] font-semibold"
               : "bg-slate-500 font-regular"
           }`}
         >

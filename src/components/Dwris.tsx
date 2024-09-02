@@ -91,28 +91,16 @@ export default async function Dwris() {
     <div className="px-4 py-4">
       <section>
         <hr />
-        <img
-          src="/img/leagues/CL.png"
-          alt="UEFA Champions League"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/CL.png" alt="UEFA Champions League" width={50} />
         <LeagueSection
           title="دوري أبطال أوروبا"
           data={getUEFAChampionsLeague}
         />
         <hr />
-        <img
-          src="/img/leagues/ED.png"
-          alt="Eredivisie"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/ED.png" alt="Eredivisie" width={50} />
         <LeagueSection title="الدوري الهولندي" data={getEredivisie} />
         <hr />
-        <img
-          src="/img/leagues/ec.png"
-          alt="European Championship"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/ec.png" alt="European Championship" width={50} />
         <LeagueSection
           title="البطولة الأوروبية"
           data={getEuropeanChampionship}
@@ -121,66 +109,54 @@ export default async function Dwris() {
         <img
           src="/img/leagues/Design-sans-titre-19.webp.webp"
           alt="La Liga"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection title="الدوري الاسباني" data={getLaLiga} />
         <hr />
         <img
           src="/img/leagues/premier_league.webp"
           alt="Premier League"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection title="الدوري الممتاز" data={getEnglishLeague} />
         <hr />
-        <img
-          src="/img/leagues/bundesliga.webp"
-          alt="Bundesliga"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/bundesliga.webp" alt="Bundesliga" width={50} />
         <LeagueSection title="الدوري الألماني" data={getBundesliga} />
         <hr />
         <img
           src="/img/leagues/championship.webp"
           alt="Championship"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection title="بطولة" data={getChampionship} />
         <hr />
         <img
           src="/img/leagues/copa_libertadores.webp"
           alt="Copa Libertadores"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection title="كوبا ليبرتادوريس" data={getCopaLibertadores} />
         <hr />
-        <img
-          src="/img/leagues/ligue_1.webp"
-          alt="Ligue 1"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/ligue_1.webp" alt="Ligue 1" width={50} />
         <LeagueSection title="الدوري الفرنسي " data={getLigue1} />
         <hr />
         <img
           src="/img/leagues/liga_portugal.webp"
           alt="Primeira Liga"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection
           title="الدوري البرتغالي الممتاز"
           data={getPrimeiraLiga}
         />
         <hr />
-        <img
-          src="/img/leagues/serie_a.webp"
-          alt="Serie A"
-          className="w-6 h-6 mx-auto"
-        />
+        <img src="/img/leagues/serie_a.webp" alt="Serie A" width={50} />
         <LeagueSection title="الدوري الإيطالي" data={getSerieA} />
         <hr />
         <img
           src="/img/leagues/brazilian_serie_a.webp"
           alt="Campeonato Brasileiro"
-          className="w-6 h-6 mx-auto"
+          width={50}
         />
         <LeagueSection title="الدوري البرازيلي" data={getBrasileiro} />
         <hr />
